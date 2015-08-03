@@ -25,8 +25,8 @@ public class Main {
                Statement statement = connection.createStatement() ) {
                System.out.println(connection.isClosed());
                //statement.execute("insert into animal (animal_name, animal_desc) value ('name', 'desc');");
-           //int res = statement.executeUpdate("UPDATE animal SET  animal_name = 'new_name', animal_desc= 'dark' where id = 10");
-            //System.out.println(res);
+           int res = statement.executeUpdate("UPDATE animal SET  animal_name = 'new_name', animal_desc= 'dark' where id = 10");
+            System.out.println(res);
           //ResultSet res = statement.executeQuery("select * from animal");
           statement.addBatch("insert into animal (animal_name, animal_desc) value ('kuzy', 'desc1');");
           statement.addBatch("insert into animal (animal_name, animal_desc) value ('luzy', 'desc21');");
